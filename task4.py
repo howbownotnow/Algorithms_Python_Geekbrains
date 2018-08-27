@@ -1,21 +1,34 @@
+'''
+Написать программу, которая генерирует в указанных пользователем границах:
+
+    случайное целое число;
+    случайное вещественное число;
+    случайный символ. Для каждого из трех случаев пользователь задает
+    свои границы диапазона. Например, если надо получить случайный символ
+    от 'a' до 'f', то вводятся эти символы. Программа должна вывести
+    на экран любой символ алфавита от 'a' до 'f' включительно.
+
+'''
+
+
 import random
 
 command = int(input('Введите номер команды:\n1 - вывести случайное целое число\n2 - случайное вещественное число\n3 - случайный символ\n'))
 
 if command == 1:
-	x, y = map(int, input('Введите начало и конец диапазона ').split())
-	print(random.randint(x, y))
+    x, y = map(int, input('Введите начало и конец диапазона ').split())
+    print(random.randint(x, y))
 
 elif command == 2:
-	x, y = map(int, input('Введите начало и конец диапазона ').split())
-	print(random.uniform(x, y))
+    x, y = map(int, input('Введите начало и конец диапазона ').split())
+    print(random.uniform(x, y))
 
 else:
-	x, y = map(str, input('Введите начало и конец диапазона ').split())
-	x_num = ord(x)
-	y_num = ord(y)
+    x, y = map(str, input('Введите начало и конец диапазона ').split())
+    x_num = ord(x)
+    y_num = ord(y)
 
-	ans_num = random.randint(x_num, y_num)
-	ans = chr(ans_num)
+    ans_num = random.randint(x_num, y_num)
+    ans = chr(ans_num)
 
-	print(ans)
+    print(ans)
