@@ -4,12 +4,17 @@
 '''
 
 def digit_sum(num):
-    summ = 0
-    while num != 0:
-        summ += num % 10
-        num //= 10
+    # summ = 0
+    # while num != 0:
+    #     summ += num % 10
+    #     num //= 10
 
-    return summ
+    # return summ
+
+    if num == 0:
+        return 0
+    else:
+        return num % 10 + digit_sum(num // 10)
 
 ans = 0
 ans_digit = 0
