@@ -5,7 +5,7 @@
 
 ans = {k: 0 for k in range(2, 10)}
 for i in range(2, 100):
-    for key in ans.keys():
+    for key in ans:
         if i % key == 0:
             ans[key] += 1
 

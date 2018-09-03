@@ -10,11 +10,11 @@ import random
 
 size = int(input('Введите размер массива '))
 limit = int(input('Введите лимит значений '))
-l = [random.randint(1, limit) for _ in range(size)]
+input_list = [random.randint(1, limit) for _ in range(size)]
 ans = []
 
-for i, elem in enumerate(l):
+for i, elem in enumerate(input_list):
     if elem % 2 == 0:
         ans.append(i)
 
-print(f'Полученный массив: {l}\nИндексы четных элементов: {ans}')
+print(f'Полученный массив: {input_list}\nИндексы четных элементов: {ans}')

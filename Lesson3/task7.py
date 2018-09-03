@@ -8,16 +8,16 @@ import random
 
 size = int(input('Введите размер массива '))
 limit = int(input('Введите лимит значений '))
-l = [random.randint((-1)*limit, limit) for _ in range(size)]
+input_list = [random.randint((-1)*limit, limit) for _ in range(size)]
 
 min_ind = 0
 second_min_ind = 0
 
-for i in range(len(l)):
-    if l[i] <= l[min_ind]:
+for i in range(len(input_list)):
+    if input_list[i] <= input_list[min_ind]:
         second_min_ind = min_ind
         min_ind = i
-    elif l[i] <= l[second_min_ind]:
+    elif input_list[i] <= input_list[second_min_ind]:
         second_min_ind = i
 
-print(f'Для массива {l} сумма двух минимальных элементов равна {l[min_ind] + l[second_min_ind]}')
+print(f'Для массива {input_list} сумма двух минимальных элементов равна {input_list[min_ind] + input_list[second_min_ind]}')

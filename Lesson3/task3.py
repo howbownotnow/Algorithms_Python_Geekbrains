@@ -4,23 +4,21 @@
 
 import random
 
-import random
-
 size = int(input('Введите размер массива '))
 limit = int(input('Введите лимит значений '))
-l = [random.randint(1, limit) for _ in range(size)]
+input_list = [random.randint(1, limit) for _ in range(size)]
 
 max_ind = 0
 min_ind = 0
 
-for i in range(len(l)):
-    if l[i] > l[max_ind]:
+for i in range(len(input_list)):
+    if input_list[i] > input_list[max_ind]:
         max_ind = i
-    elif l[i] < l[min_ind]:
+    elif input_list[i] < input_list[min_ind]:
         min_ind = i
 
-print(f'Исходный массив: {l}')
+print(f'Исходный массив: {input_list}')
 
-l[max_ind], l[min_ind] = l[min_ind], l[max_ind]
+input_list[max_ind], input_list[min_ind] = input_list[min_ind], input_list[max_ind]
 
-print(f'Полученный массив: {l}')
+print(f'Полученный массив: {input_list}')
