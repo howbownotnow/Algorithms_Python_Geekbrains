@@ -55,7 +55,7 @@ class HexList:
             x += digit
         for digit in other.num:
             y += digit
-        return list(str(hex(int(x, 16) + int(y, 16)))[2:])
+        return HexList(str(hex(int(x, 16) + int(y, 16)))[2:])
 
     def __mul__(self, other):
         x = y = self.prefix
@@ -63,7 +63,7 @@ class HexList:
             x += digit
         for digit in other.num:
             y += digit
-        return list(str(hex(int(x, 16) * int(y, 16)))[2:])
+        return HexList(str(hex(int(x, 16) * int(y, 16)))[2:])
 
 
 a = HexList(a)
