@@ -16,12 +16,12 @@ import sys
 while True:
 
     op = input('Введите операцию (+, -, *, /)\n0 чтобы завершить работу ')
-
+    
     if op == '0':
         break
 
     a, b = map(int, input('Введите два числа через пробел ').split())
-
+    
     if op == '+':
         print(a + b)
 
@@ -36,6 +36,7 @@ while True:
             print('Деление на 0!')
         else:
             print(a / b)
+
     else:
         print('Неизвестная операция')
 
@@ -45,4 +46,4 @@ for name, value in par.items():
     s += sys.getsizeof(value)
     print(f'значение, на которое ссылается имя {name}, занимает {sys.getsizeof(value)} байт')
 
-print(f'Общий объем значений переменных в программе: {s} байт')
+print(f'Общий объем значений переменных в программе: {s} байт') 
