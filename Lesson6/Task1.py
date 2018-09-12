@@ -40,9 +40,20 @@ while True:
     else:
         print('Неизвестная операция')
 
+
+# Подсчет памяти, занимаемой переменными
 par = globals().copy()
 s = 0
 for name, value in par.items():
+    if name.startswith('__'):
+        # Убираем "магию""
+        continue
+    elif  hasattr(value, '__loader__'):
+        # Убираем модули
+        continue
+    elif hasattr(value, '__call__'):
+        # Убираем функции
+        continue
     s += sys.getsizeof(value)
     print(f'значение, на которое ссылается имя {name}, занимает {sys.getsizeof(value)} байт')
 
