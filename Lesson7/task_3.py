@@ -40,7 +40,7 @@ for i in range(len(array)):
         if counter_left == len(array) // 2:
             break
 
-# Разархивировать для наглядной проверки медианы:
+# Раскомментировать для наглядной проверки медианы:
 # print(f'Отсортированный массив:\n{sorted(array)}')
 
 print(f'Медиана массива: {median}')

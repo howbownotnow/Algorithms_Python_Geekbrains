@@ -8,9 +8,10 @@ import random
 
 n = int(input('Введите длину массива для сортировки '))
 
-array = [random.randint(0, 49) for _ in range(n)]
+array = [round(random.uniform(0, 50), 3) for _ in range(n)]
 
 print(f'Исходный массив:\n{array}')
+
 
 def merge_sort(array):
 
@@ -48,6 +49,7 @@ def merge_sort(array):
         array[k] = right[j]
         j += 1
         k += 1
+
 
 merge_sort(array)
 
