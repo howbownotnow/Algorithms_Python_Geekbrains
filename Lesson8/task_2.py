@@ -24,7 +24,7 @@ def haffman_tree(s):
     while len(sorted_s) > 1:
 
         weight = sorted_s[0][1] + sorted_s[1][1]
-        node = MyNode(left = sorted_s.popleft()[0], right = sorted_s.popleft()[0])
+        node = MyNode(left=sorted_s.popleft()[0], right=sorted_s.popleft()[0])
 
         # Вставка пары "узел, вес" на нужное место в список
         for i, item in enumerate(sorted_s):
@@ -36,7 +36,7 @@ def haffman_tree(s):
         else:
             sorted_s.append((node, weight))
 
-    return(sorted_s[0][0])
+    return sorted_s[0][0]
 
 
 code_table = dict()
